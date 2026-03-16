@@ -2,7 +2,7 @@ name: Jules Maintenance
 
 on:
   schedule:
-    - cron: '45 */1 * * *' # Run hourly (offset by 45 mins)
+    - cron: '0 9 * * *' # Run daily at 9 AM
   workflow_dispatch:
 
 permissions:
