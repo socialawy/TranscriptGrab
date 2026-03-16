@@ -298,6 +298,16 @@ const App: React.FC = () => {
                         >
                            Download
                         </button>
+                        <button
+                           onClick={() => {
+                             setState(prev => ({ ...prev, result: null, error: null, activeChannel: null }));
+                             setUrlInput('');
+                             setLoadingStatus('');
+                           }}
+                           className="text-xs px-2 py-1 bg-red-50 text-red-600 rounded hover:bg-red-100 transition-colors"
+                        >
+                           Clear
+                        </button>
                     </div>
                 </div>
 
