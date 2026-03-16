@@ -1,0 +1,30 @@
+name: Jules Maintenance
+
+on:
+  schedule:
+    - cron: '45 */1 * * *' # Run hourly (offset by 45 mins)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  jules-maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Invoke Jules
+        uses: google-labs-code/jules-invoke@v1
+        with:
+          jules_api_key: ${{ secrets.JULES_API_KEY }}
+          prompt: |
+            Perform a routine maintenance sweep:
+            1. Update npm packages and resolve any security vulnerabilities.
+            2. Fix any TypeScript/Build issues reported in logs.
+            3. Improve the "Waterfall Strategy" fetching logic or add a small UI enhancement.
+            4. Ensure RTL support remains perfect for all new components.
+            
+            Always create a clean, descriptive pull request for your changes.
