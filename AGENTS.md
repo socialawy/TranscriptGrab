@@ -3,6 +3,10 @@
 ## Project Overview
 A high-performance YouTube transcript extraction tool built with React and TypeScript. Uses a "Waterfall Strategy" for maximum reliability.
 
+## Important Accounts
+- **GitHub Owner**: `socialawy-dev`
+- **Primary Contact**: `ahmed.itc@gmail.com`
+
 ## Tech Stack
 - **Framework**: React 19 & Vite
 - **Language**: TypeScript
